@@ -1,3 +1,4 @@
+import random # This should be on line 1
 # print("Hello World")
 #
 # # bree virrueta
@@ -85,3 +86,41 @@ def grade_calc(percentage):
          return "D"
      else:
          return "F"
+
+
+'''Write a function called "happy_bday"
+that "sings" (prints) Happy Birthday
+
+It must take one parameter called "name"
+'''
+
+
+def happy_bday(name):
+    print("Happy birthday to you" + ",")
+    print("Happy birthday to you" + ",")
+    print("Happy birthday dear " + name + ",")
+    print("Happy birthday to you" + ".")
+
+happy_bday("John")
+
+
+# Loops
+
+for num in range(10):
+    print(num + 1)
+
+
+a = 1
+while a <= 10:
+    print(a)
+    a += 1
+
+
+# Random Numbers
+
+import random # This should be on line 1
+print(random.randint(0, 100))
+
+
+
+
