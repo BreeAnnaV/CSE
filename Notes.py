@@ -114,13 +114,13 @@ happy_bday("John")
 for num in range(10):
     print(num + 1)
 
+# While
 a = 1
 while a <= 10:
     print(a)
     a += 1
 
 # Random Numbers
-import random  # This should be on line 1
 print(random.randint(0, 100))
 
 # Comparisons

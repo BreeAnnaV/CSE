@@ -41,7 +41,7 @@ def add(num1, num2, num3):
     print(num1 + num2 + num3)
 
 
-add(90, 900 , 9000)
+add(90, 900, 9000)
 
 # 12.7.17
 # Write a function called "repeat"
@@ -79,6 +79,7 @@ date(12, 8, 17) == "12/8/17"
 
 def date(month, day, year):
     print(month + "/" + day + "/" + year)
+
 
 date("12", "8", "17")
 
