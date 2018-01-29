@@ -14,7 +14,7 @@ while money > 0:
     dice2 = (random.randint(1, 6))
     total = dice1 + dice2
     print("You rolled a %s" % dice1)
-    print("You also rolled a %s" %dice2)
+    print("You also rolled a %s" % dice2)
     print("Your total is %s" % total)
     print("Your current amount of money is %s" % money)
     if total == 7:

@@ -10,30 +10,34 @@
 
 def reverse_order(first_name, last_name):
     print("%s, %s." % (last_name % first_name))
-    print(last_name + " " + first_name) #Concatenation
+    print(last_name + " " + first_name)  # Concatenation
 
 def reverse_order():
     first_name = input("First name")
     last_name = input("Last name")
     print("%s, %s." % (last_name % first_name))
 
-
     # 12.5.17
-"""Write a function called add_py
+"""
+
+Write a function called add_py
 that takes one parameter called name.py
 example:
 add_py("I_eat") == "I_eat.py"
+
 """
 
-
 def add_py(name):
-    print("%s.py" % name) # Solution 1
-    print(name + ".py") # Solution 2
+    print("%s.py" % name)  # Solution 1
+    print(name + ".py")  # Solution 2
 
     # 12.6.17
-"""Write a function called "add"
+"""
+
+Write a function called "add"
 which takes three parameters
 and prints the sum of the numbers
+
 """
 
 
@@ -82,16 +86,3 @@ def date(month, day, year):
 
 
 date("12", "8", "17")
-
-
-
-
-
-
-
-
-
-
-
-
-
