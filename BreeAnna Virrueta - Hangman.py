@@ -9,13 +9,18 @@ A general guide for Hangman
 5. Create the win condition
 
 """
-guesses = 10
+guesses_left = 10
 
 word_bank = ["Environment", "Xylophone", "LeBron James", "Kobe", "Jordan", "Stephen Curry", "Avenue", "Galaxy",
              "Snazzy", "The answer is two"]
 word_picked = (random.choice(word_bank))
-letters_guessed = [""]
-guess = ''
+letters_guessed = []
+random_word = len(word_picked)
+# print(word_picked)
+guess = ""
 
-while input != word_picked:
-    word_bank
+while guess != "str1":
+    guess = ()
+    for letter in word_picked:
+        if letter is letters_guessed:
+            print()
