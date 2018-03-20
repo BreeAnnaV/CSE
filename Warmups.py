@@ -12,12 +12,15 @@ def reverse_order(first_name, last_name):
     print("%s, %s." % (last_name % first_name))
     print(last_name + " " + first_name)  # Concatenation
 
+
 def reverse_order():
     first_name = input("First name")
     last_name = input("Last name")
     print("%s, %s." % (last_name % first_name))
 
     # 12.5.17
+
+
 """
 
 Write a function called add_py
@@ -27,11 +30,14 @@ add_py("I_eat") == "I_eat.py"
 
 """
 
+
 def add_py(name):
     print("%s.py" % name)  # Solution 1
     print(name + ".py")  # Solution 2
 
     # 12.6.17
+
+
 """
 
 Write a function called "add"

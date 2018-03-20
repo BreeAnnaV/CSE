@@ -1,4 +1,4 @@
-import string
+# import string
 # import random  # This should be on line 1
 # print("Hello World")
 # bree virrueta
@@ -121,6 +121,7 @@ import string
 # # The input command ALWAYS gives a string
 
 # Lists
+'''
 the_count = [1, 2, 3, 4, 5]
 shopping_list = ["Noodles", "Egg Roles", "Milk", "Rice", "Soda", "Chips"]
 
@@ -169,7 +170,90 @@ print(string.ascii_lowercase)
 print(string.punctuation)
 print(string.digits)
 
+
 # Dealing with strings
 strTwo = "ThIs iS a VeRY oDd sEnTenCE."
 lowercase = strTwo.lower()
 print(lowercase)
+'''
+
+# Dictionaries - Made up of Key: Value pairs
+dictionary = {'name': 'Lance', 'age': 23, 'height': 5 * 12 + 7}
+
+# Accessing Dictionaries
+print(dictionary['name'])
+print(dictionary['age'])
+print(dictionary['height'])
+
+# Adding to a dictionary
+dictionary['weight'] = 280
+print(dictionary)
+
+large_dictionary = {
+    'CA': 'California',
+    'FL': 'Florida',
+    'OH': 'Ohio'
+}
+
+print(large_dictionary['FL'])
+
+larger_dictionary = {
+    'CA': [
+        'Fresno',
+        'Sacramento',
+        'Los Angeles'
+    ],
+    'FL': [
+        'Tampa',
+        'Orlando',
+        'Miami'
+    ],
+    'OH': [
+        'Cleveland',
+        'Cincinnati',
+    ]
+}
+
+print(larger_dictionary['FL'])
+print(larger_dictionary['FL'][2])
+
+print(larger_dictionary['OH'])
+print(larger_dictionary['OH'][1])
+
+largest_dictionary = {
+     'CA': {
+         'NAME': 'California',
+         'POPULATION': 39250000,
+         'BORDER ST': [
+            'Oregon',
+            'Nevada',
+            'Arizona'
+         ]
+     },
+     'AZ': {
+        'NAME': 'Arizona',
+        'POPULATION': 6931000,
+        'BORDER ST': [
+            'California',
+            'Utah',
+            'Nevada',
+            'New Mexico'
+        ]
+     },
+     'NY': {
+        'NAME': "New York",
+        'POPULATION': 19750000,
+        'BORDER ST': [
+            'Vermont',
+            'Massachusetts',
+            'Connecticut',
+            'Pennsylvania',
+            'New Jersey'
+        ]
+     }
+}
+
+current_node = largest_dictionary['CA']
+print(current_node)
+print(current_node['NAME'])
+print(current_node['POPULATION'])
