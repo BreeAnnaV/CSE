@@ -114,7 +114,7 @@ world_map = {
     },
     'CLOTHES': {
         'NAME': 'Clothing Stores',
-        'DESCRIPTION': 'The stores are flooded with people, but it is you lucky day, you are already wearing clothes!',
+        'DESCRIPTION': 'The stores are flooded with people, but it is your lucky day, you are already wearing clothes!',
         'PATHS': {
             'SOUTH': 'FOOD',
             'EAST': 'KIDS'

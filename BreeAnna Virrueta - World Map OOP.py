@@ -31,7 +31,7 @@ class Room(object):
             command = directions[pos]
         if command in directions:
             try:
-                name_of_node = current_node.paths[command]
+                name_of_node = current_node.name[command]
                 current_node = [name_of_node]
             except KeyError:
                 print("You Cannot Go This Way.")
@@ -40,7 +40,6 @@ class Room(object):
         print()
 
 
-# Initialize Rooms
 CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None, None,
               None, None)
 FOOD = Room("Food Court", "You are inside. You see many different restaurants.", 'CLOTHES', 'GOLF', 'CENTER',
@@ -52,7 +51,7 @@ WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading
 MEN = Room("Men Restroom", "You see someone in the corner. You could go up to them, or go south.", None, None, None,
            'PARKING', None, None, 'RESTROOM')
 PARKING = Room('Parking Garage', "You are outside, behind the mall. You see a door pretty far from you leading back "
-                                 "inside.", 'RESTROOMS', 'GARAGE', 'BASKETBALL', None, None, None, None,)
+                                 "inside.", 'RESTROOMS', 'GARAGE', 'BASKETBALL', None, None, None, None, )
 GOLF = Room("Mini Golf Course", "You are in a slightly lit room with many people waiting in a line. You see golf balls "
                                 "and clubs. Do you want to play a round, or leave?", None, None, 'FOOD', 'GARBAGE',
             None, None, None)
