@@ -20,8 +20,8 @@ class Toy(Item):
         print("You play with the %s." % self.name)
 
 
-test_toy = Toy('action figure')
-test_toy.play()
+# test_toy = Toy('action figure')
+# test_toy.play()
 
 
 class StuffedAnimal(Toy):
@@ -32,8 +32,8 @@ class StuffedAnimal(Toy):
         print("You take the %s." % self.name)
 
 
-test_animal = StuffedAnimal('stuffed rabbit')
-test_animal.collect_animal()
+# test_animal = StuffedAnimal('stuffed rabbit')
+# test_animal.collect_animal()
 
 
 class ActionFigure(Toy):
@@ -44,8 +44,8 @@ class ActionFigure(Toy):
         print("You take the %s action figure." % self.name)
 
 
-test_figure = ActionFigure('batman')
-test_figure.collect_figure()
+# test_figure = ActionFigure('batman')
+# test_figure.collect_figure()
 
 
 class JoyStick(Toy):
@@ -65,8 +65,8 @@ class Clothing(Item):
         print("You wear the %s." % self.name)
 
 
-test_clothing = Clothing('shirt', 'guess')
-test_clothing.wear()
+# test_clothing = Clothing('shirt', 'guess')
+# test_clothing.wear()
 
 
 class Shirt(Clothing):
@@ -77,9 +77,9 @@ class Shirt(Clothing):
         print("You take the %s shirt." % self.brand)
 
 
-test_shirt = Shirt('shirt', 'supreme')
-test_shirt.collect_shirt()
-test_shirt.wear()
+# test_shirt = Shirt('shirt', 'supreme')
+# test_shirt.collect_shirt()
+# test_shirt.wear()
 
 
 class Pants(Clothing):
@@ -90,9 +90,9 @@ class Pants(Clothing):
         print("You take the %s pants." % self.brand)
 
 
-test_pants = Pants('pants', 'gucci')
-test_pants.wear()
-test_pants.collect_pants()
+# test_pants = Pants('pants', 'gucci')
+# test_pants.wear()
+# test_pants.collect_pants()
 
 
 class Shoes(Clothing):
@@ -103,9 +103,9 @@ class Shoes(Clothing):
         print("You take the %s %s." % (self.brand, self.name))
 
 
-test_shoes = Shoes('slides', 'gucci')
-test_shoes.collect_shoes()
-test_shoes.wear()
+# test_shoes = Shoes('slides', 'gucci')
+# test_shoes.collect_shoes()
+# test_shoes.wear()
 
 
 class Hat(Clothing):
@@ -116,9 +116,9 @@ class Hat(Clothing):
         print("You take the %s %s." % (self.brand, self.name))
 
 
-test_hat = Hat('beanie', 'north face')
-test_hat.collect_hat()
-test_hat.wear()
+# test_hat = Hat('beanie', 'north face')
+# test_hat.collect_hat()
+# test_hat.wear()
 
 
 class HockeyPuck(Item):
@@ -162,12 +162,12 @@ class WelcomeLetter(Item):
         print("You read the letter. %s" % self.words)
 
 
-test_letter = WelcomeLetter('Welcome Letter', 'Welcome to the game. The goal is to collect everything you can and '
-                                              'put it into a case you will have to find. If you do not find '
-                                              'everything, you will not be able to win the game. If you are able to '
-                                              'collect everything, you win the game. Along the way you will discover'
-                                              'many other fun activities to do. Good Luck.')
-test_letter.read_letter()
+# test_letter = WelcomeLetter('Welcome Letter', 'Welcome to the game. The goal is to collect everything you can and '
+#                                               'put it into a case you will have to find. If you do not find '
+#                                               'everything, you will not be able to win the game. If you are able to '
+#                                               'collect everything, you win the game. Along the way you will discover'
+#                                               'many other fun activities to do. Good Luck.')
+# test_letter.read_letter()
 
 
 class Basketball(Item):
@@ -199,9 +199,9 @@ class Bat(Weapon):
         print("You take the bat with %s durability." % self.durability)
 
 
-test_bat = Bat('bat', '90%')
-test_bat.attack()
-test_bat.collect_bat()
+# test_bat = Bat('bat', '90%')
+# test_bat.attack()
+# test_bat.collect_bat()
 
 
 class HockeyStick(Weapon):
@@ -227,15 +227,15 @@ class Consumable(Item):
 
     def buy(self):
         print("The price is %s. Do you want to buy it?" % self.price)
-        command = input('>_')
-        if command == 'yes':
+    command = input('>_')
+    if command == 'yes':
             print("It is all yours.")
-        elif command == 'no':
+    elif command == 'no':
             print("You did not buy it.")
 
 
-test_consumable = Consumable('salad', '$50')
-test_consumable.buy()
+# test_consumable = Consumable('salad', '$50')
+# test_consumable.buy()
 
 
 class CornDog(Consumable):
@@ -254,8 +254,8 @@ class Soda(Consumable):
         print("You take a sip of the %s." % self.name)
 
 
-test_soda = Soda('sprite', '$2')
-test_soda.drink_soda()
+# test_soda = Soda('sprite', '$2')
+# test_soda.drink_soda()
 
 
 class Salad(Consumable):
@@ -274,8 +274,8 @@ class Candy(Consumable):
         print("You eat the %s." % self.name)
 
 
-test_candy = Candy('skittles', '3 dollars')
-test_candy.buy()
+# test_candy = Candy('skittles', '3 dollars')
+# test_candy.buy()
 
 
 class Characters(object):
@@ -299,8 +299,8 @@ class Characters(object):
         print("You move forward %s spaces." % spaces)
 
 
-character = Characters("Joe", "Tall", "Has a sword and cherries", True, "100%")
-character.move_forward(2)
+# character = Characters("Joe", "Tall", "Has a sword and cherries", True, "100%")
+# character.move_forward(2)
 
 
 class Room(object):
@@ -323,6 +323,7 @@ class Room(object):
 CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None, None,
               None, None)
 
+
 current_node = CENTER
 directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave']
 short_directions = ['n', 'w', 'e', 's']
@@ -340,7 +341,6 @@ while True:
         command = directions[pos]
     if command in directions:
         try:
-
             name_of_node = current_node.name[command]
             current_node = [name_of_node]
         except KeyError:
@@ -348,7 +348,6 @@ while True:
     else:
         print("Command Not Recognized.")
     print()
-
 
 CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None, None,
               None, None)

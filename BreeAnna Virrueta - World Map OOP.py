@@ -14,9 +14,11 @@ class Room(object):
         global current_node
         current_node = globals()[getattr(self, direction)]
 
-    current_node = CENTER
-    directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave']
-    short_directions = ['n', 'w', 'e', 's']
+center_mall = CENTER
+
+current_node = center_mall
+directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave']
+short_directions = ['n', 'w', 'e', 's']
 
     while True:
         print(current_node.name)
