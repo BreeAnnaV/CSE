@@ -31,8 +31,7 @@ class Room(object):
             command = directions[pos]
         if command in directions:
             try:
-                name_of_node = current_node.name[command]
-                current_node = [name_of_node]
+                current_node.move(command)
             except KeyError:
                 print("You Cannot Go This Way.")
         else:

@@ -1,5 +1,3 @@
-# import statements
-# class definitions
 # items -> characters -> rooms
 # instantiate classes
 
@@ -225,13 +223,13 @@ class Consumable(Item):
         super(Consumable, self).__init__(name)
         self.price = price
 
-    def buy(self):
-        print("The price is %s. Do you want to buy it?" % self.price)
-    command = input('>_')
-    if command == 'yes':
-            print("It is all yours.")
-    elif command == 'no':
-            print("You did not buy it.")
+    # def buy(self):
+    #     print("The price is %s. Do you want to buy it?" % self.price)
+    # command = input('>_')
+    # if command == 'yes':
+    #         print("It is all yours.")
+    # elif command == 'no':
+    #         print("You did not buy it.")
 
 
 # test_consumable = Consumable('salad', '$50')
@@ -298,9 +296,12 @@ class Characters(object):
         self.move()
         print("You move forward %s spaces." % spaces)
 
+    def spawn(self):
+        print("You spawn in the world.")
+
 
 # character = Characters("Joe", "Tall", "Has a sword and cherries", True, "100%")
-# character.move_forward(2)
+# character.spawn()
 
 class Room(object):
     def __init__(self, name, description, north, west, east, south, left, right, leave):
@@ -323,17 +324,16 @@ CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", '
               None, None)
 FOOD = Room("Food Court", "You are inside. You see many different restaurants.", 'CLOTHES', 'GOLF', 'CENTER',
             'RESTROOMS', None, None, None)
-RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female room, the other to the male room. Go left"
-                              " or right."'FOOD', None, None, None, 'MEN', 'WOMEN', None, None)
+RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female room, the other to the male room. Go "
+                              "left or right.", 'FOOD', None, None, None, 'MEN', 'WOMEN', None)
 WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading south.", None, None, None, 'PARKING',
-             None, None, 'RESTROOM')
+             None, None, 'RESTROOMS')
 MEN = Room("Men Restroom", "You see someone in the corner. You could go up to them, or go south.", None, None, None,
-           'PARKING', None, None, 'RESTROOM')
+           'PARKING', None, None, 'RESTROOMS')
 PARKING = Room('Parking Garage', "You are outside, behind the mall. You see a door pretty far from you leading back "
                                  "inside.", 'RESTROOMS', 'GARAGE', 'BASKETBALL', None, None, None, None, )
 GOLF = Room("Mini Golf Course", "You are in a slightly lit room with many people waiting in a line. You see golf balls "
-                                "and clubs. Do you want to play a round, or leave?", None, None, 'FOOD', 'GARBAGE',
-            None, None, None)
+                                "and clubs.", None, None, 'FOOD', 'GARBAGE', None, None, None)
 GARBAGE = Room("Dumpsters", "There is a terrible smell coming from the dumpsters.", 'GOLF', None, 'PARKING', None,
                None, None, None)
 BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and you are trying your best not to get hit. "
@@ -350,7 +350,7 @@ CLOTHES = Room("Clothing Stores", "The stores are flooded with people, but it is
                                   "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None)
 KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear a huge crash. To the east you see "
                          "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None)
-RACE = Room("Race Track", "'A huge track is in front of you.", None, 'KIDS', None, None, None, None, None)
+RACE = Room("Race Track", "A huge track is in front of you.", None, 'KIDS', None, None, None, None, None)
 ARCADE = Room("Arcade", "A room full of retro machines and new gadgets.", None, 'CENTER', None, 'SPORTS', None, None,
               None)
 
@@ -376,8 +376,7 @@ while True:
         command = directions[pos]
     if command in directions:
         try:
-            name_of_node = current_node.name[command]
-            center_node = name_of_node
+            current_node.move(command)
         except KeyError:
             print("You Cannot Go This Way.")    
     else:

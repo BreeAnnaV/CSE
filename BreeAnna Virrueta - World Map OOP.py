@@ -15,7 +15,8 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
-current_node = CENTER
+CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None, None,
+              None, None)
 directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave']
 short_directions = ['n', 'w', 'e', 's']
 
