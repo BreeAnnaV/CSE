@@ -17,8 +17,8 @@
       <file leaf-file-name="BreeAnna Virrueta - CYOA.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - CYOA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="308" column="11" lean-forward="true" selection-start-line="308" selection-start-column="11" selection-end-line="308" selection-end-column="11" />
+            <state relative-caret-position="238">
+              <caret line="228" column="26" lean-forward="true" selection-start-line="228" selection-start-column="26" selection-end-line="228" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -27,8 +27,8 @@
       <file leaf-file-name="BreeAnna Virrueta - World Map OOP.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - World Map OOP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="41" column="11" lean-forward="true" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+            <state relative-caret-position="493">
+              <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -37,8 +37,8 @@
       <file leaf-file-name="BreeAnna Virrueta - Items.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - Items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/Controller.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,7 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>basket</find>
       <find>clothes</find>
       <find>kids</find>
       <find>KIDS</find>
@@ -88,13 +87,14 @@
       <find>paths</find>
       <find>pos</find>
       <find>return</find>
-      <find>while</find>
       <find>name</find>
       <find>quit</find>
       <find>command</find>
       <find>race</find>
       <find>RESTROOM</find>
       <find>charac</find>
+      <find>while</find>
+      <find>item</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,13 +120,13 @@
         <option value="$PROJECT_DIR$/BreeAnna Virrueta - Program.py" />
         <option value="$PROJECT_DIR$/BreeAnna Virrueta - Items.py" />
         <option value="$PROJECT_DIR$/BreeAnna Virrueta - Dictionary World Map.py" />
-        <option value="$PROJECT_DIR$/BreeAnna Virrueta - World Map OOP.py" />
         <option value="$PROJECT_DIR$/Controller.py" />
+        <option value="$PROJECT_DIR$/BreeAnna Virrueta - World Map OOP.py" />
         <option value="$PROJECT_DIR$/BreeAnna Virrueta - CYOA.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="52" />
     <option name="y" value="9" />
     <option name="width" value="1300" />
@@ -149,7 +149,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -161,6 +160,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,7 +347,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="9" width="1300" height="688" extended-state="0" />
+    <frame x="52" y="9" width="1300" height="688" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23909657" sideWeight="0.4897436" order="0" side_tool="false" content_ui="combo" />
@@ -535,31 +535,31 @@
     <entry file="file://$PROJECT_DIR$/Controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - Items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="41" column="11" lean-forward="true" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+        <state relative-caret-position="493">
+          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - CYOA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="308" column="11" lean-forward="true" selection-start-line="308" selection-start-column="11" selection-end-line="308" selection-end-column="11" />
+        <state relative-caret-position="238">
+          <caret line="228" column="26" lean-forward="true" selection-start-line="228" selection-start-column="26" selection-end-line="228" selection-end-column="26" />
           <folding />
         </state>
       </provider>

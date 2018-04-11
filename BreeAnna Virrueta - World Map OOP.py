@@ -17,32 +17,6 @@ class Room(object):
 
 CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None, None,
               None, None)
-directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave']
-short_directions = ['n', 'w', 'e', 's']
-
-while True:
-    print(current_node.name)
-    print(current_node.description)
-    command = input('>_').lower()
-    if command == 'quit':
-        quit(0)
-    elif command in short_directions:
-        # Look for which command we typed in
-        pos = short_directions.index(command)
-        # Change the command to be the long form
-        command = directions[pos]
-    if command in directions:
-        try:
-            name_of_node = current_node.name
-            current_node = [name_of_node]
-        except KeyError:
-            print("You Cannot Go This Way.")
-    else:
-        print("Command Not Recognized.")
-    print()
-
-CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None, None,
-              None, None)
 FOOD = Room("Food Court", "You are inside. You see many different restaurants.", 'CLOTHES', 'GOLF', 'CENTER',
             'RESTROOMS', None, None, None)
 RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female room, the other to the male room. Go left"
@@ -75,3 +49,31 @@ KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear 
 RACE = Room("Race Track", "'A huge track is in front of you.", None, 'KIDS', None, None, None, None, None)
 ARCADE = Room("Arcade", "A room full of retro machines and new gadgets.", None, 'CENTER', None, 'SPORTS', None, None,
               None)
+
+
+center_node = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None,
+                   None, None, None)
+
+current_node = center_node
+directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave']
+short_directions = ['n', 'w', 'e', 's']
+
+while True:
+    print(current_node.name)
+    print(current_node.description)
+    command = input('>_').lower()
+    if command == 'quit':
+        quit(0)
+    elif command in short_directions:
+        # Look for which command we typed in
+        pos = short_directions.index(command)
+        # Change the command to be the long form
+        command = directions[pos]
+    if command in directions:
+        try:
+            current_node.move(command)
+        except KeyError:
+            print("You Cannot Go This Way.")
+    else:
+        print("Command Not Recognized.")
+    print()
