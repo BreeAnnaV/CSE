@@ -161,7 +161,7 @@ class WelcomeLetter(Item):
 
 
 # test_letter = WelcomeLetter('Welcome Letter', 'Welcome to the game. The goal is to collect everything you can and '
-#                                               'put it into a case you will have to find. If you do not find '
+#                                               'put it into a case you at the Center of the Mall. If you do not find '
 #                                               'everything, you will not be able to win the game. If you are able to '
 #                                               'collect everything, you win the game. Along the way you will discover'
 #                                               'many other fun activities to do. Good Luck.')
@@ -277,16 +277,16 @@ class Candy(Consumable):
 
 
 class Characters(object):
-    def __init__(self, name, description, inventory, abilities, health):
+    def __init__(self, name, description, inventory, ability, health):
         self.name = name
         self.description = description
         self.inventory = inventory
-        self.abilities = abilities
+        self.ability = ability
         self.health = health
         self.spaces = 0
 
     def move(self):
-        if self.abilities:
+        if self.ability:
             print("You move.")
         else:
             print("Nothing happens.")
