@@ -87,7 +87,6 @@ class Pants(Clothing):
     def collect_pants(self):
         print("You take the %s pants." % self.brand)
 
-
 # test_pants = Pants('pants', 'gucci')
 # test_pants.wear()
 # test_pants.collect_pants()
@@ -277,31 +276,31 @@ class Candy(Consumable):
 
 
 class Characters(object):
-    def __init__(self, name, description, inventory, ability, health):
+    def __init__(self, name, description, inventory, ability):
         self.name = name
         self.description = description
         self.inventory = inventory
         self.ability = ability
-        self.health = health
         self.spaces = 0
 
     def move(self):
         if self.ability:
-            print("You move.")
+            print("It moves.")
         else:
             print("Nothing happens.")
 
     def move_forward(self, spaces):
         self.spaces = spaces
         self.move()
-        print("You move forward %s spaces." % spaces)
+        print("It moves forward %s spaces." % spaces)
 
     def spawn(self):
         print("You spawn in the world.")
 
 
-# character = Characters("Joe", "Tall", "Has a sword and cherries", True, "100%")
-# character.spawn()
+boy_men = Characters("The little boy", "He is holding something.", ActionFigure, True)
+you = Characters("You", None, 'Nothing', None)
+
 
 class Room(object):
     def __init__(self, name, description, north, west, east, south, left, right, leave, item):
@@ -342,15 +341,15 @@ BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and yo
                   None, None, None, None, Basketball)
 SPORTS = Room("Sports Center", "There are multiple hallways in front of you.", 'ARCADE', 'BAT', 'ICE', 'BASKETBALL',
               None, None, None, None)
-ICE = Room("Ice Rink", "All of a sudden it gets extremely cold. You could get skates, or just carry on with your life.",
-           None, 'SPORTS', 'SWIM', None, None, None, None, (HockeyStick, HockeyPuck))
-BAT = Room('Batting Cage', "You like baseball? You can practice your bating skills now.", None, None, 'SPORTS', None,
-           None, None, None, Bat)
+ICE = Room("Ice Rink", "All of a sudden it gets extremely cold. People are playing hockeyon the ice. There is a puck "
+                       "next to you, along with a stick", None, 'SPORTS', 'SWIM', None, None, None, None, (HockeyStick,
+                                                                                                           HockeyPuck))
+BAT = Room('Batting Cage', "You have been looking for a new bat.", None, None, 'SPORTS', None, None, None, None, Bat)
 SWIM = Room("Swimming Pools", "The room is full of pools.", None, 'ICE', None, None, None, None, None, None)
 CLOTHES = Room("Clothing Stores", "The stores are flooded with people, but it is your lucky day, you are already "
                                   "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, Clothing)
 KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear a huge crash. To the east you see "
-                         "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, (ActionFigure, StuffedAnimal))
+                         "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedAnimal)
 RACE = Room("Race Track", "A huge track is in front of you.", None, 'KIDS', None, None, None, None, None, Wrench)
 ARCADE = Room("Arcade", "A room full of retro machines and new gadgets.", None, 'CENTER', None, 'SPORTS', None, None,
               None, JoyStick)
