@@ -62,7 +62,6 @@ class Clothing(Item):
     def wear(self):
         print("You wear the %s." % self.name)
 
-
 # test_clothing = Clothing('shirt', 'guess')
 # test_clothing.wear()
 
@@ -322,35 +321,39 @@ class Room(object):
 
 CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None, None,
               None, None, WelcomeLetter)
-FOOD = Room("Food Court", "You are inside. You see many different restaurants.", 'CLOTHES', 'GOLF', 'CENTER',
-            'RESTROOMS', None, None, None, Consumable)
+FOOD = Room("Food Court", "You are inside. You see many different restaurants. Order a corn dog, soda, salad, or "
+                          "candy.", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, Consumable)
 RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female room, the other to the male room. Go "
                               "left or right.", 'FOOD', None, None, None, 'MEN', 'WOMEN', None, None)
 WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading south.", None, None, None, 'PARKING',
              None, None, 'RESTROOMS', None)
 MEN = Room("Men Restroom", "You see someone in the corner. You could go up to them, or go south.", None, None, None,
            'PARKING', None, None, 'RESTROOMS', None)
-PARKING = Room('Parking Garage', "You are outside, behind the mall. You see a door pretty far from you leading back "
-                                 "inside.", 'RESTROOMS', 'GARAGE', 'BASKETBALL', None, None, None, None, CarKey)
+PARKING = Room('Parking Garage', "You are outside, behind the mall. There is sometbing shiny on the ground. "
+                                 "You see a door pretty far from you leading back inside.", 'RESTROOMS', 'GARAGE',
+               'BASKETBALL', None, None, None, None, CarKey)
 GOLF = Room("Mini Golf Course", "You are in a slightly lit room with many people waiting in a line. You see golf balls "
                                 "and clubs.", None, None, 'FOOD', 'GARBAGE', None, None, None, MiniGolfBall)
-GARBAGE = Room("Dumpsters", "There is a terrible smell coming from the dumpsters.", 'GOLF', None, 'PARKING', None,
-               None, None, None, SteeringWheel)
-BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and you are trying your best not to get hit. "
-                                       "Your only way out is through a door to the north.", 'SPORTS', 'PARKING', None,
-                  None, None, None, None, Basketball)
+GARBAGE = Room("Dumpsters", "There is a terrible smell coming from the dumpsters. You see something that catches your "
+                            "attention.", 'GOLF', None, 'PARKING', None, None, None, None, SteeringWheel)
+BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and you are trying your best not to get hit."
+                                       "If you get one you can throw it at someone, or your only way out is through a "
+                                       "door to the north.", 'SPORTS', 'PARKING', None, None, None, None, None,
+                  Basketball)
 SPORTS = Room("Sports Center", "There are multiple hallways in front of you.", 'ARCADE', 'BAT', 'ICE', 'BASKETBALL',
               None, None, None, None)
-ICE = Room("Ice Rink", "All of a sudden it gets extremely cold. People are playing hockeyon the ice. There is a puck "
+ICE = Room("Ice Rink", "All of a sudden it gets extremely cold. People are playing hockey on the ice. There is a puck "
                        "next to you, along with a stick", None, 'SPORTS', 'SWIM', None, None, None, None, (HockeyStick,
                                                                                                            HockeyPuck))
-BAT = Room('Batting Cage', "You have been looking for a new bat.", None, None, 'SPORTS', None, None, None, None, Bat)
+BAT = Room('Batting Cage', "You have been looking for a new bat. There is one in front of you.", None, None, 'SPORTS',
+           None, None, None, None, Bat)
 SWIM = Room("Swimming Pools", "The room is full of pools.", None, 'ICE', None, None, None, None, None, None)
 CLOTHES = Room("Clothing Stores", "The stores are flooded with people, but it is your lucky day, you are already "
                                   "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, Clothing)
 KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear a huge crash. To the east you see "
                          "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedAnimal)
-RACE = Room("Race Track", "A huge track is in front of you.", None, 'KIDS', None, None, None, None, None, Wrench)
+RACE = Room("Race Track", "A huge track is in front of you.You should take the wrench on the ground", None, 'KIDS',
+            None, None, None, None, None, Wrench)
 ARCADE = Room("Arcade", "A room full of retro machines and new gadgets.", None, 'CENTER', None, 'SPORTS', None, None,
               None, JoyStick)
 

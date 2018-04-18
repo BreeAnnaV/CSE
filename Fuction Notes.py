@@ -36,9 +36,9 @@ print(distance(0, 0, 3, 4))
 
 
 def pythagorean(a, b):
-    theorem = a ** 2 + b **2
+    theorem = a ** 2 + b ** 2
     answer = theorem ** 0.5
     return answer
 
-print(pythagorean(5, 12))
 
+print(pythagorean(5, 12))

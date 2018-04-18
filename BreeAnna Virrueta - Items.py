@@ -168,8 +168,8 @@ class Basketball(Item):
     def __init__(self, name):
         super(Basketball, self).__init__(name)
 
-    def shoot_ball(self):
-        print("You did not make it.")
+    def throw_ball(self):
+        print("You hit someone. Run!")
 
 
 class Weapon(Item):
