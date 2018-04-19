@@ -170,8 +170,8 @@ class Basketball(Item):
     def __init__(self, name):
         super(Basketball, self).__init__(name)
 
-    def shoot_ball(self):
-        print("You did not make it.")
+    def throw_ball(self):
+        print("You hit someone. Run!")
 
 
 class Weapon(Item):
@@ -302,7 +302,7 @@ you = Characters("You", None, 'Nothing', None)
 
 
 class Room(object):
-    def __init__(self, name, description, north, west, east, south, left, right, leave, item):
+    def __init__(self, name, description, north, west, east, south, left, right, leave, item, characters):
         self.name = name
         self.description = description
         self.north = north
@@ -313,6 +313,7 @@ class Room(object):
         self.right = right
         self.leave = leave
         self.item = item
+        self.characters = characters
 
     def move(self, direction):
         global current_node
@@ -320,46 +321,47 @@ class Room(object):
 
 
 CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None, None,
-              None, None, WelcomeLetter)
+              None, None, WelcomeLetter, None)
 FOOD = Room("Food Court", "You are inside. You see many different restaurants. Order a corn dog, soda, salad, or "
-                          "candy.", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, Consumable)
+                          "candy.", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, Consumable, None)
 RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female room, the other to the male room. Go "
-                              "left or right.", 'FOOD', None, None, None, 'MEN', 'WOMEN', None, None)
+                              "left or right.", 'FOOD', None, None, None, 'MEN', 'WOMEN', None, None, None)
 WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading south.", None, None, None, 'PARKING',
-             None, None, 'RESTROOMS', None)
+             None, None, 'RESTROOMS', None, None)
 MEN = Room("Men Restroom", "You see someone in the corner. You could go up to them, or go south.", None, None, None,
-           'PARKING', None, None, 'RESTROOMS', None)
+           'PARKING', None, None, 'RESTROOMS', None, boy_men)
 PARKING = Room('Parking Garage', "You are outside, behind the mall. There is sometbing shiny on the ground. "
                                  "You see a door pretty far from you leading back inside.", 'RESTROOMS', 'GARAGE',
-               'BASKETBALL', None, None, None, None, CarKey)
+               'BASKETBALL', None, None, None, None, CarKey, None)
 GOLF = Room("Mini Golf Course", "You are in a slightly lit room with many people waiting in a line. You see golf balls "
-                                "and clubs.", None, None, 'FOOD', 'GARBAGE', None, None, None, MiniGolfBall)
+                                "and clubs.", None, None, 'FOOD', 'GARBAGE', None, None, None, MiniGolfBall, None)
 GARBAGE = Room("Dumpsters", "There is a terrible smell coming from the dumpsters. You see something that catches your "
-                            "attention.", 'GOLF', None, 'PARKING', None, None, None, None, SteeringWheel)
+                            "attention.", 'GOLF', None, 'PARKING', None, None, None, None, SteeringWheel, None)
 BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and you are trying your best not to get hit."
                                        "If you get one you can throw it at someone, or your only way out is through a "
                                        "door to the north.", 'SPORTS', 'PARKING', None, None, None, None, None,
-                  Basketball)
+                  Basketball, None)
 SPORTS = Room("Sports Center", "There are multiple hallways in front of you.", 'ARCADE', 'BAT', 'ICE', 'BASKETBALL',
-              None, None, None, None)
+              None, None, None, None, None)
 ICE = Room("Ice Rink", "All of a sudden it gets extremely cold. People are playing hockey on the ice. There is a puck "
                        "next to you, along with a stick", None, 'SPORTS', 'SWIM', None, None, None, None, (HockeyStick,
-                                                                                                           HockeyPuck))
+                                                                                                           HockeyPuck),
+           None)
 BAT = Room('Batting Cage', "You have been looking for a new bat. There is one in front of you.", None, None, 'SPORTS',
-           None, None, None, None, Bat)
-SWIM = Room("Swimming Pools", "The room is full of pools.", None, 'ICE', None, None, None, None, None, None)
+           None, None, None, None, Bat, None)
+SWIM = Room("Swimming Pools", "The room is full of pools.", None, 'ICE', None, None, None, None, None, None, None)
 CLOTHES = Room("Clothing Stores", "The stores are flooded with people, but it is your lucky day, you are already "
-                                  "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, Clothing)
+                                  "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, Clothing, None)
 KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear a huge crash. To the east you see "
-                         "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedAnimal)
+                         "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedAnimal, None)
 RACE = Room("Race Track", "A huge track is in front of you.You should take the wrench on the ground", None, 'KIDS',
-            None, None, None, None, None, Wrench)
+            None, None, None, None, None, Wrench, None)
 ARCADE = Room("Arcade", "A room full of retro machines and new gadgets.", None, 'CENTER', None, 'SPORTS', None, None,
-              None, JoyStick)
+              None, JoyStick, None)
 
 
 center_node = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None,
-                   None, None, None, WelcomeLetter)
+                   None, None, None, WelcomeLetter, you)
 
 
 current_node = center_node
