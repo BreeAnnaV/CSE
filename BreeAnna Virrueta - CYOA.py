@@ -284,21 +284,21 @@ class Characters(object):
 
     def move(self):
         if self.ability:
-            print("It moves.")
+            print("You move.")
         else:
             print("Nothing happens.")
 
     def move_forward(self, spaces):
         self.spaces = spaces
         self.move()
-        print("It moves forward %s spaces." % spaces)
+        print("%s move forward %s spaces." % (self.name, spaces))
 
     def spawn(self):
-        print("You spawn in the world.")
+        print("%s spawn in the world." % self.name)
 
 
-boy_men = Characters("The little boy", "He is holding something.", ActionFigure, True)
-you = Characters("You", None, 'Nothing', None)
+boy_men = Characters("The little boy", "He is holding something.", ActionFigure, False)
+you = Characters("You", None, 'Nothing', True)
 
 
 class Room(object):
