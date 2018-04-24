@@ -22,33 +22,33 @@ class Toy(Item):
 # test_toy.play()
 
 
-class StuffedAnimal(Toy):
-    def __init__(self, name):
-        super(StuffedAnimal, self).__init__(name)
+class StuffedRabbit(Toy):
+    def __init__(self):
+        super(StuffedRabbit, self).__init__(name="Stuffed Rabbit")
 
     def collect_animal(self):
         print("You take the %s." % self.name)
 
 
-# test_animal = StuffedAnimal('stuffed rabbit')
+# test_animal = StuffedRabbit()
 # test_animal.collect_animal()
 
 
 class ActionFigure(Toy):
-    def __init__(self, name):
-        super(ActionFigure, self).__init__(name)
+    def __init__(self):
+        super(ActionFigure, self).__init__(name="Batman")
 
     def collect_figure(self):
         print("You take the %s action figure." % self.name)
 
 
-# test_figure = ActionFigure('batman')
+# test_figure = ActionFigure()
 # test_figure.collect_figure()
 
 
 class JoyStick(Toy):
-    def __init__(self, name):
-        super(JoyStick, self).__init__(name)
+    def __init__(self):
+        super(JoyStick, self).__init__(name="joystick")
 
     def collect_joystick(self):
         print("You take the joystick. This may come in handy later.")
@@ -118,24 +118,24 @@ class Hat(Clothing):
 
 
 class HockeyPuck(Item):
-    def __init__(self, name):
-        super(HockeyPuck, self).__init__(name)
+    def __init__(self):
+        super(HockeyPuck, self).__init__(name="hockey puck")
 
     def collect_puck(self):
         print("You take the hockey puck. This may come in handy later.")
 
 
 class MiniGolfBall(Item):
-    def __init__(self, name):
-        super(MiniGolfBall, self).__init__(name)
+    def __init__(self):
+        super(MiniGolfBall, self).__init__(name="mini golf ball")
 
     def collect_ball(self):
         print("You take the mini golf ball. This may come in handy later.")
 
 
 class CarKey(Item):
-    def __init__(self, name):
-        super(CarKey, self).__init__(name)
+    def __init__(self):
+        super(CarKey, self).__init__(name="car key")
 
     def collect_key(self):
         print("You take the car key. This may come in handy later.")
@@ -143,15 +143,15 @@ class CarKey(Item):
 
 class SteeringWheel(Item):
     def __init__(self, name):
-        super(SteeringWheel, self).__init__(name)
+        super(SteeringWheel, self).__init__(name="steering wheel")
 
     def collect_wheel(self):
         print("You take the steering wheel. This may come in handy later.")
 
 
 class WelcomeLetter(Item):
-    def __init__(self, name, words):
-        super(WelcomeLetter, self).__init__(name)
+    def __init__(self, words):
+        super(WelcomeLetter, self).__init__(name="Welcome Letter")
         self.words = words
 
     def read_letter(self):
@@ -167,8 +167,8 @@ class WelcomeLetter(Item):
 
 
 class Basketball(Item):
-    def __init__(self, name):
-        super(Basketball, self).__init__(name)
+    def __init__(self):
+        super(Basketball, self).__init__(name="basketball")
 
     def throw_ball(self):
         print("You hit someone. Run!")
@@ -188,29 +188,32 @@ test_weapon = Weapon('sword', '90%')
 
 
 class Bat(Weapon):
-    def __init__(self, name, durability):
-        super(Bat, self).__init__(name, durability)
+    def __init__(self):
+        super(Bat, self).__init__(name="bat",
+                                  durability=100)
 
     def collect_bat(self):
         print("You take the bat with %s durability." % self.durability)
 
 
-# test_bat = Bat('bat', '90%')
-# test_bat.attack()
+# test_bat = Bat()
 # test_bat.collect_bat()
+# test_bat.attack()
 
 
 class HockeyStick(Weapon):
     def __init__(self, name, durability):
-        super(HockeyStick, self).__init__(name, durability)
+        super(HockeyStick, self).__init__(name="hockey stick",
+                                          durability=100)
 
     def collect_stick(self):
         print("You take the hockey stick with %s durability." % self.durability)
 
 
 class Wrench(Weapon):
-    def __init__(self, name, durability):
-        super(Wrench, self).__init__(name, durability)
+    def __init__(self):
+        super(Wrench, self).__init__(name="wrench",
+                                     durability=100)
 
     def collect_wrench(self):
         print("You take the wrench with %s durability" % self.durability)
@@ -221,13 +224,13 @@ class Consumable(Item):
         super(Consumable, self).__init__(name)
         self.price = price
 
-    # def buy(self):
-    #     print("The price is %s. Do you want to buy it?" % self.price)
-    # command = input('>_')
-    # if command == 'yes':
-    #         print("It is all yours.")
-    # elif command == 'no':
-    #         print("You did not buy it.")
+    def buy(self):
+        print("The price is %s. Do you want to buy it?" % self.price)
+    command = input('>_')
+    if command == 'yes':
+            print("It is all yours.")
+    elif command == 'no':
+            print("You did not buy it.")
 
 
 # test_consumable = Consumable('salad', '$50')
@@ -236,10 +239,18 @@ class Consumable(Item):
 
 class CornDog(Consumable):
     def __init__(self, name, price):
-        super(CornDog, self).__init__(name, price)
+        super(CornDog, self).__init__(name="corn dog",
+                                      price=2)
 
     def eat_corndog(self):
         print("You eat the %s." % self.name)
+
+
+test_dog = CornDog('corn dog', 2)
+test_dog.buy()
+test_dog.eat_corndog()
+
+
 
 
 class Soda(Consumable):
@@ -353,7 +364,7 @@ SWIM = Room("Swimming Pools", "The room is full of pools.", None, 'ICE', None, N
 CLOTHES = Room("Clothing Stores", "The stores are flooded with people, but it is your lucky day, you are already "
                                   "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, Clothing, None)
 KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear a huge crash. To the east you see "
-                         "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedAnimal, None)
+                         "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedRabbit, None)
 RACE = Room("Race Track", "A huge track is in front of you.You should take the wrench on the ground", None, 'KIDS',
             None, None, None, None, None, Wrench, None)
 ARCADE = Room("Arcade", "A room full of retro machines and new gadgets.", None, 'CENTER', None, 'SPORTS', None, None,
