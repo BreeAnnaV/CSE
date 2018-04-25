@@ -142,7 +142,7 @@ class CarKey(Item):
 
 
 class SteeringWheel(Item):
-    def __init__(self, name):
+    def __init__(self):
         super(SteeringWheel, self).__init__(name="steering wheel")
 
     def collect_wheel(self):
@@ -202,7 +202,7 @@ class Bat(Weapon):
 
 
 class HockeyStick(Weapon):
-    def __init__(self, name, durability):
+    def __init__(self):
         super(HockeyStick, self).__init__(name="hockey stick",
                                           durability=100)
 
@@ -225,20 +225,16 @@ class Consumable(Item):
         self.price = price
 
     def buy(self):
-        print("The price is %s. Do you want to buy it?" % self.price)
-    command = input('>_')
-    if command == 'yes':
+        print("The price is $%s. Do you want to buy it?" % self.price)
+        command2 = input('>_')
+        if command2 == 'yes':
             print("It is all yours.")
-    elif command == 'no':
+        elif command2 == 'no':
             print("You did not buy it.")
 
 
-# test_consumable = Consumable('salad', '$50')
-# test_consumable.buy()
-
-
 class CornDog(Consumable):
-    def __init__(self, name, price):
+    def __init__(self):
         super(CornDog, self).__init__(name="corn dog",
                                       price=2)
 
@@ -246,36 +242,32 @@ class CornDog(Consumable):
         print("You eat the %s." % self.name)
 
 
-test_dog = CornDog('corn dog', 2)
+test_dog = CornDog()
 test_dog.buy()
-test_dog.eat_corndog()
-
-
 
 
 class Soda(Consumable):
-    def __init__(self, name, price):
-        super(Soda, self).__init__(name, price)
+    def __init__(self):
+        super(Soda, self).__init__(name="soda",
+                                   price=4)
 
     def drink_soda(self):
         print("You take a sip of the %s." % self.name)
 
 
-# test_soda = Soda('sprite', '$2')
-# test_soda.drink_soda()
-
-
 class Salad(Consumable):
-    def __init__(self, name, price):
-        super(Salad, self).__init__(name, price)
+    def __init__(self):
+        super(Salad, self).__init__(name="salad",
+                                    price=7)
 
     def eat_salad(self):
         print("You eat the %s." % self.name)
 
 
 class Candy(Consumable):
-    def __init__(self, name, price):
-        super(Candy, self).__init__(name, price)
+    def __init__(self):
+        super(Candy, self).__init__(name="candy",
+                                    price=2)
 
     def eat_candy(self):
         print("You eat the %s." % self.name)
