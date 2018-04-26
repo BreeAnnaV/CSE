@@ -1,3 +1,5 @@
+import items
+import characters
 # items -> characters -> rooms
 # instantiate classes
 
@@ -333,7 +335,7 @@ WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading
              None, None, 'RESTROOMS', None, None)
 MEN = Room("Men Restroom", "You see someone in the corner. You could go up to them, or go south.", None, None, None,
            'PARKING', None, None, 'RESTROOMS', None, boy_men)
-PARKING = Room('Parking Garage', "You are outside, behind the mall. There is sometbing shiny on the ground. "
+PARKING = Room('Parking Garage', "You are outside, behind the mall. There is something shiny on the ground. "
                                  "You see a door pretty far from you leading back inside.", 'RESTROOMS', 'GARAGE',
                'BASKETBALL', None, None, None, None, CarKey, None)
 GOLF = Room("Mini Golf Course", "You are in a slightly lit room with many people waiting in a line. You see golf balls "
@@ -344,12 +346,11 @@ BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and yo
                                        "If you get one you can throw it at someone, or your only way out is through a "
                                        "door to the north.", 'SPORTS', 'PARKING', None, None, None, None, None,
                   Basketball, None)
-SPORTS = Room("Sports Center", "There are multiple hallways in front of you.", 'ARCADE', 'BAT', 'ICE', 'BASKETBALL',
-              None, None, None, None, None)
-ICE = Room("Ice Rink", "All of a sudden it gets extremely cold. People are playing hockey on the ice. There is a puck "
-                       "next to you, along with a stick", None, 'SPORTS', 'SWIM', None, None, None, None, (HockeyStick,
-                                                                                                           HockeyPuck),
-           None)
+SPORTS = Room("Sports Center", "There are multiple hallways in front of you. You also see a hockey puck just sitting on"
+                               "the ground.", 'ARCADE', 'BAT', 'ICE', 'BASKETBALL', None, None, None, HockeyPuck, None)
+ICE = Room("Ice Rink", "All of a sudden it gets extremely cold. People are playing hockey on the ice. You see a "
+                       "hockey stick next to you, along with a stick", None, 'SPORTS', 'SWIM', None, None, None, None,
+           HockeyStick, None)
 BAT = Room('Batting Cage', "You have been looking for a new bat. There is one in front of you.", None, None, 'SPORTS',
            None, None, None, None, Bat, None)
 SWIM = Room("Swimming Pools", "The room is full of pools.", None, 'ICE', None, None, None, None, None, None, None)
@@ -372,6 +373,8 @@ directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave']
 short_directions = ['n', 'w', 'e', 's']
 
 while True:
+    while Items:
+        
     print(current_node.name)
     print(current_node.description)
     command = input('>_').lower()

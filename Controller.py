@@ -1,3 +1,4 @@
+import item
 class Room(object):
     def __init__(self, name, description, north, west, east, south, left, right, leave):
         self.name = name
