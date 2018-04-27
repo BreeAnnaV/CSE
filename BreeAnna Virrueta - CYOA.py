@@ -1,5 +1,3 @@
-import items
-import characters
 # items -> characters -> rooms
 # instantiate classes
 
@@ -53,7 +51,7 @@ class JoyStick(Toy):
         super(JoyStick, self).__init__(name="joystick")
 
     def collect_joystick(self):
-        print("You take the joystick. This may come in handy later.")
+        print("You pick up the joystick. This may come in handy later.")
 
 
 class Clothing(Item):
@@ -124,7 +122,7 @@ class HockeyPuck(Item):
         super(HockeyPuck, self).__init__(name="hockey puck")
 
     def collect_puck(self):
-        print("You take the hockey puck. This may come in handy later.")
+        print("You pick up the hockey puck. This may come in handy later.")
 
 
 class MiniGolfBall(Item):
@@ -132,7 +130,7 @@ class MiniGolfBall(Item):
         super(MiniGolfBall, self).__init__(name="mini golf ball")
 
     def collect_ball(self):
-        print("You take the mini golf ball. This may come in handy later.")
+        print("You pick up the mini golf ball. This may come in handy later.")
 
 
 class CarKey(Item):
@@ -140,7 +138,7 @@ class CarKey(Item):
         super(CarKey, self).__init__(name="car key")
 
     def collect_key(self):
-        print("You take the car key. This may come in handy later.")
+        print("You pick up the car key. This may come in handy later.")
 
 
 class SteeringWheel(Item):
@@ -148,7 +146,7 @@ class SteeringWheel(Item):
         super(SteeringWheel, self).__init__(name="steering wheel")
 
     def collect_wheel(self):
-        print("You take the steering wheel. This may come in handy later.")
+        print("You pick up the steering wheel. This may come in handy later.")
 
 
 class WelcomeLetter(Item):
@@ -338,8 +336,8 @@ MEN = Room("Men Restroom", "You see someone in the corner. You could go up to th
 PARKING = Room('Parking Garage', "You are outside, behind the mall. There is something shiny on the ground. "
                                  "You see a door pretty far from you leading back inside.", 'RESTROOMS', 'GARAGE',
                'BASKETBALL', None, None, None, None, CarKey, None)
-GOLF = Room("Mini Golf Course", "You are in a slightly lit room with many people waiting in a line. You see golf balls "
-                                "and clubs.", None, None, 'FOOD', 'GARBAGE', None, None, None, MiniGolfBall, None)
+GOLF = Room("Mini Golf Course", "You are in a slightly lit room with many people waiting in a line. You see golf "
+                                "balls.", None, None, 'FOOD', 'GARBAGE', None, None, None, MiniGolfBall, None)
 GARBAGE = Room("Dumpsters", "There is a terrible smell coming from the dumpsters. You see something that catches your "
                             "attention.", 'GOLF', None, 'PARKING', None, None, None, None, SteeringWheel, None)
 BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and you are trying your best not to get hit."
@@ -373,8 +371,6 @@ directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave']
 short_directions = ['n', 'w', 'e', 's']
 
 while True:
-    while Items:
-        
     print(current_node.name)
     print(current_node.description)
     command = input('>_').lower()
