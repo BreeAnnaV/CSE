@@ -242,8 +242,8 @@ class CornDog(Consumable):
         print("You eat the %s." % self.name)
 
 
-test_dog = CornDog()
-test_dog.buy()
+# test_dog = CornDog()
+# test_dog.buy()
 
 
 class Soda(Consumable):
@@ -323,8 +323,8 @@ class Room(object):
         current_node = globals()[getattr(self, direction)]
 
 
-CENTER = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None, None,
-              None, None, WelcomeLetter, None)
+CENTER = Room("Center of the Mall", "You are outside a huge shopping center. There is a letter in your hand.", 'KIDS',
+              'FOOD', 'ARCADE', None, None, None, None, WelcomeLetter, None)
 FOOD = Room("Food Court", "You are inside. You see many different restaurants. Order a corn dog, soda, salad, or "
                           "candy.", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, Consumable, None)
 RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female room, the other to the male room. Go "
