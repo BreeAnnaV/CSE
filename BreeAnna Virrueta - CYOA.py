@@ -224,13 +224,13 @@ class Consumable(Item):
         super(Consumable, self).__init__(name)
         self.price = price
 
-    def buy(self):
-        print("The price is $%s. Do you want to buy it?" % self.price)
-        command2 = input('>_')
-        if command2 == 'yes':
-            print("It is all yours.")
-        elif command2 == 'no':
-            print("You did not buy it.")
+    # def buy(self):
+    #     print("The price is $%s. Do you want to buy it?" % self.price)
+    #     command2 = input('>_')
+    #     if command2 == 'yes':
+    #         print("It is all yours.")
+    #     elif command2 == 'no':
+    #         print("You did not buy it.")
 
 
 class CornDog(Consumable):
@@ -331,8 +331,18 @@ RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female ro
                               "left or right.", 'FOOD', None, None, None, 'MEN', 'WOMEN', None, None, None)
 WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading south.", None, None, None, 'PARKING',
              None, None, 'RESTROOMS', None, None)
-MEN = Room("Men Restroom", "You see someone in the corner. You could go up to them, or go south.", None, None, None,
-           'PARKING', None, None, 'RESTROOMS', None, boy_men)
+MEN = Room("Men Restroom", "\n You see someone in the corner. \n #1 You could go up to them, \n #2 or go south.", None,
+           None, None, 'PARKING', None, None, 'RESTROOMS', None, boy_men)
+option = input(">_")
+
+if option == "1":
+    print("He is holding an action figure. He says he is lost. Being the person you are, you just stare at him blankly "
+          "until he walks away.")
+
+elif option == "2":
+    print("You go south.")
+
+
 PARKING = Room('Parking Garage', "You are outside, behind the mall. There is something shiny on the ground. "
                                  "You see a door pretty far from you leading back inside.", 'RESTROOMS', 'GARAGE',
                'BASKETBALL', None, None, None, None, CarKey, None)
@@ -367,7 +377,7 @@ center_node = Room("Center of the Mall", "You are outside a huge shopping center
 
 
 current_node = center_node
-directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave']
+directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave', 'order']
 short_directions = ['n', 'w', 'e', 's']
 
 while True:
@@ -388,4 +398,3 @@ while True:
             print("You Cannot Go This Way.")    
     else:
         print("Command Not Recognized.")
-    print()
