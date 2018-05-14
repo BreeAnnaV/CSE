@@ -17,18 +17,8 @@
       <file leaf-file-name="BreeAnna Virrueta - CYOA.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - CYOA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1340">
-              <caret line="222" column="35" lean-forward="true" selection-start-line="222" selection-start-column="35" selection-end-line="222" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="413">
+              <caret line="401" column="37" lean-forward="false" selection-start-line="401" selection-start-column="37" selection-end-line="401" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -45,8 +35,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>welcom</find>
-      <find>welcome</find>
       <find>arcade</find>
       <find>bat</find>
       <find>rest</find>
@@ -75,6 +63,8 @@
       <find>buy</find>
       <find>string</find>
       <find>list</find>
+      <find>def</find>
+      <find>if</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -84,7 +74,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/n.py" />
-        <option value="$PROJECT_DIR$/BreeAnna Virrueta - Guessgame.py" />
         <option value="$PROJECT_DIR$/L.py" />
         <option value="$PROJECT_DIR$/q.py" />
         <option value="$PROJECT_DIR$/BreeAnna Virrueta - Lucky 7's.py" />
@@ -101,16 +90,17 @@
         <option value="$PROJECT_DIR$/Fuction Notes.py" />
         <option value="$PROJECT_DIR$/BreeAnna Virrueta - Items.py" />
         <option value="$PROJECT_DIR$/Notes.py" />
-        <option value="$PROJECT_DIR$/Controller.py" />
         <option value="$PROJECT_DIR$/k.py" />
+        <option value="$PROJECT_DIR$/Controller.py" />
+        <option value="$PROJECT_DIR$/BreeAnna Virrueta - Guessgame.py" />
         <option value="$PROJECT_DIR$/BreeAnna Virrueta - CYOA.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="41" />
     <option name="y" value="13" />
-    <option name="width" value="1306" />
+    <option name="width" value="1310" />
     <option name="height" value="693" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -129,8 +119,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -184,7 +174,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="BreeAnna Virrueta - Dictionary World Map" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="BreeAnna Virrueta - Guessgame" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -196,7 +186,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="CSE" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BreeAnna Virrueta - Dictionary World Map.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BreeAnna Virrueta - Guessgame.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -291,17 +281,17 @@
       <item index="1" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - Lucky 7's" />
       <item index="2" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - Items" />
       <item index="3" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - World Map OOP" />
-      <item index="4" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - Dictionary World Map" />
-      <item index="5" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - CYOA" />
-      <item index="6" class="java.lang.String" itemvalue="Python.Controller" />
+      <item index="4" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - CYOA" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Controller" />
+      <item index="6" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - Guessgame" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - CYOA" />
-        <item index="1" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - Items" />
+        <item index="1" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - Guessgame" />
         <item index="2" class="java.lang.String" itemvalue="Python.Controller" />
-        <item index="3" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - World Map OOP" />
-        <item index="4" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - Dictionary World Map" />
+        <item index="3" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - Items" />
+        <item index="4" class="java.lang.String" itemvalue="Python.BreeAnna Virrueta - World Map OOP" />
       </list>
     </recent_temporary>
   </component>
@@ -328,19 +318,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="13" width="1306" height="693" extended-state="0" />
+    <frame x="41" y="13" width="1310" height="693" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2379845" sideWeight="0.4897436" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23724884" sideWeight="0.4897436" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.4904014" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3099099" sideWeight="0.51732475" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30874786" sideWeight="0.48267525" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29331046" sideWeight="0.48267525" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495637" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871974" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2513089" sideWeight="0.5102564" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39965397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39794168" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957292" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -448,13 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - Pythagorean Theorem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - World Map OOP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
@@ -480,13 +463,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - Guessgame.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -526,26 +502,40 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/k.py" />
-    <entry file="file://$PROJECT_DIR$/Controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Notes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="138" column="17" lean-forward="false" selection-start-line="138" selection-start-column="13" selection-end-line="138" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - Pythagorean Theorem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - Guessgame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - CYOA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1340">
-          <caret line="222" column="35" lean-forward="true" selection-start-line="222" selection-start-column="35" selection-end-line="222" selection-end-column="35" />
+        <state relative-caret-position="413">
+          <caret line="401" column="37" lean-forward="false" selection-start-line="401" selection-start-column="37" selection-end-line="401" selection-end-column="37" />
           <folding />
         </state>
       </provider>

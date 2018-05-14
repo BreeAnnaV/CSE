@@ -158,12 +158,11 @@ class WelcomeLetter(Item):
         print("You read the letter. %s" % self.words)
 
 
-# test_letter = WelcomeLetter('Welcome Letter', 'Welcome to the game. The goal is to collect everything you can and '
-#                                               'put it into a case you at the Center of the Mall. If you do not find '
-#                                               'everything, you will not be able to win the game. If you are able to '
-#                                               'collect everything, you win the game. Along the way you will discover'
-#                                               'many other fun activities to do. Good Luck.')
-# test_letter.read_letter()
+test_letter = WelcomeLetter('Welcome to the game. The goal is to collect everything you can and '
+                            'put it into a case you at the Center of the Mall. If you do not '
+                            'find everything, you will not be able to win the game. If you are '
+                            'able to collect everything, you win the game. Along the way you '
+                            'will discover many other fun activities to do. Good Luck.')
 
 
 class Basketball(Item):
@@ -333,14 +332,14 @@ WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading
              None, None, 'RESTROOMS', None, None)
 MEN = Room("Men Restroom", "\n You see someone in the corner. \n #1 You could go up to them, \n #2 or go south.", None,
            None, None, 'PARKING', None, None, 'RESTROOMS', None, boy_men)
-option = input(">_")
-
-if option == "1":
-    print("He is holding an action figure. He says he is lost. Being the person you are, you just stare at him blankly "
-          "until he walks away.")
-
-elif option == "2":
-    print("You go south.")
+# option = input(">_")
+#
+# if option == "1":
+#     print("He is holding an action figure. He says he is lost. Being the person you are, you just stare at him "
+#           "blankly until he walks away.")
+#
+# elif option == "2":
+#     print("You go south.")
 
 
 PARKING = Room('Parking Garage', "You are outside, behind the mall. There is something shiny on the ground. "
@@ -354,8 +353,9 @@ BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and yo
                                        "If you get one you can throw it at someone, or your only way out is through a "
                                        "door to the north.", 'SPORTS', 'PARKING', None, None, None, None, None,
                   Basketball, None)
-SPORTS = Room("Sports Center", "There are multiple hallways in front of you. You also see a hockey puck just sitting on"
-                               "the ground.", 'ARCADE', 'BAT', 'ICE', 'BASKETBALL', None, None, None, HockeyPuck, None)
+SPORTS = Room("Sports Center", "There are multiple hallways in front of you. You also see a hockey puck just sitting "
+                               "on the ground.", 'ARCADE', 'BAT', 'ICE', 'BASKETBALL', None, None, None, HockeyPuck,
+              None)
 ICE = Room("Ice Rink", "All of a sudden it gets extremely cold. People are playing hockey on the ice. You see a "
                        "hockey stick next to you, along with a stick", None, 'SPORTS', 'SWIM', None, None, None, None,
            HockeyStick, None)
@@ -398,3 +398,5 @@ while True:
             print("You Cannot Go This Way.")    
     else:
         print("Command Not Recognized.")
+    if command == "pick up":
+        print("You pick up the %s" % )
