@@ -10,16 +10,15 @@ class Item(object):
         print("You drop %s" % self.name)
 
 
+test_item = Item
+
+
 class Toy(Item):
     def __init__(self, name):
         super(Toy, self).__init__(name)
 
     def play(self):
         print("You play with the %s." % self.name)
-
-
-# test_toy = Toy('action figure')
-# test_toy.play()
 
 
 class StuffedRabbit(Toy):
@@ -30,8 +29,7 @@ class StuffedRabbit(Toy):
         print("You take the %s." % self.name)
 
 
-# test_animal = StuffedRabbit()
-# test_animal.collect_animal()
+test_stuffed = StuffedRabbit()
 
 
 class ActionFigure(Toy):
@@ -42,8 +40,7 @@ class ActionFigure(Toy):
         print("You take the %s action figure." % self.name)
 
 
-# test_figure = ActionFigure()
-# test_figure.collect_figure()
+test_figure = ActionFigure()
 
 
 class JoyStick(Toy):
@@ -54,6 +51,9 @@ class JoyStick(Toy):
         print("You pick up the joystick. This may come in handy later.")
 
 
+test_joystick = JoyStick
+
+
 class Clothing(Item):
     def __init__(self, name, brand):
         super(Clothing, self).__init__(name)
@@ -61,9 +61,6 @@ class Clothing(Item):
 
     def wear(self):
         print("You wear the %s." % self.name)
-
-# test_clothing = Clothing('shirt', 'guess')
-# test_clothing.wear()
 
 
 class Shirt(Clothing):
@@ -74,9 +71,7 @@ class Shirt(Clothing):
         print("You take the %s shirt." % self.brand)
 
 
-# test_shirt = Shirt('shirt', 'supreme')
-# test_shirt.collect_shirt()
-# test_shirt.wear()
+test_shirt = Shirt
 
 
 class Pants(Clothing):
@@ -86,7 +81,8 @@ class Pants(Clothing):
     def collect_pants(self):
         print("You take the %s pants." % self.brand)
 
-# test_pants = Pants('pants', 'gucci')
+
+test_pants = Pants
 # test_pants.wear()
 # test_pants.collect_pants()
 
@@ -99,7 +95,7 @@ class Shoes(Clothing):
         print("You take the %s %s." % (self.brand, self.name))
 
 
-# test_shoes = Shoes('slides', 'gucci')
+test_shoes = Shoes
 # test_shoes.collect_shoes()
 # test_shoes.wear()
 
@@ -112,7 +108,7 @@ class Hat(Clothing):
         print("You take the %s %s." % (self.brand, self.name))
 
 
-# test_hat = Hat('beanie', 'north face')
+test_hat = Hat
 # test_hat.collect_hat()
 # test_hat.wear()
 
@@ -125,12 +121,18 @@ class HockeyPuck(Item):
         print("You pick up the hockey puck. This may come in handy later.")
 
 
+test_puck = HockeyPuck
+
+
 class MiniGolfBall(Item):
     def __init__(self):
         super(MiniGolfBall, self).__init__(name="mini golf ball")
 
     def collect_ball(self):
         print("You pick up the mini golf ball. This may come in handy later.")
+
+
+test_golf = MiniGolfBall
 
 
 class CarKey(Item):
@@ -141,12 +143,18 @@ class CarKey(Item):
         print("You pick up the car key. This may come in handy later.")
 
 
+test_key = CarKey
+
+
 class SteeringWheel(Item):
     def __init__(self):
         super(SteeringWheel, self).__init__(name="steering wheel")
 
     def collect_wheel(self):
         print("You pick up the steering wheel. This may come in handy later.")
+
+
+test_wheel = SteeringWheel
 
 
 class WelcomeLetter(Item):
@@ -173,6 +181,9 @@ class Basketball(Item):
         print("You hit someone. Run!")
 
 
+test_ball = Basketball
+
+
 class Weapon(Item):
     def __init__(self, name, durability):
         super(Weapon, self).__init__(name)
@@ -183,7 +194,7 @@ class Weapon(Item):
         self.durability = ('%s' % self.durability)
 
 
-test_weapon = Weapon('sword', '90%')
+test_weapon = Weapon
 
 
 class Bat(Weapon):
@@ -195,7 +206,7 @@ class Bat(Weapon):
         print("You take the bat with %s durability." % self.durability)
 
 
-# test_bat = Bat()
+test_bat = Bat
 # test_bat.collect_bat()
 # test_bat.attack()
 
@@ -209,6 +220,9 @@ class HockeyStick(Weapon):
         print("You take the hockey stick with %s durability." % self.durability)
 
 
+test_stick = HockeyStick
+
+
 class Wrench(Weapon):
     def __init__(self):
         super(Wrench, self).__init__(name="wrench",
@@ -218,18 +232,13 @@ class Wrench(Weapon):
         print("You take the wrench with %s durability" % self.durability)
 
 
+test_wrench = Wrench
+
+
 class Consumable(Item):
     def __init__(self, name, price):
         super(Consumable, self).__init__(name)
         self.price = price
-
-    # def buy(self):
-    #     print("The price is $%s. Do you want to buy it?" % self.price)
-    #     command2 = input('>_')
-    #     if command2 == 'yes':
-    #         print("It is all yours.")
-    #     elif command2 == 'no':
-    #         print("You did not buy it.")
 
 
 class CornDog(Consumable):
@@ -241,7 +250,7 @@ class CornDog(Consumable):
         print("You eat the %s." % self.name)
 
 
-# test_dog = CornDog()
+test_dog = CornDog
 # test_dog.buy()
 
 
@@ -254,6 +263,9 @@ class Soda(Consumable):
         print("You take a sip of the %s." % self.name)
 
 
+test_soda = Soda
+
+
 class Salad(Consumable):
     def __init__(self):
         super(Salad, self).__init__(name="salad",
@@ -261,6 +273,9 @@ class Salad(Consumable):
 
     def eat_salad(self):
         print("You eat the %s." % self.name)
+
+
+test_salad = Salad
 
 
 class Candy(Consumable):
@@ -272,7 +287,7 @@ class Candy(Consumable):
         print("You eat the %s." % self.name)
 
 
-# test_candy = Candy('skittles', '3 dollars')
+test_candy = Candy
 # test_candy.buy()
 
 
@@ -330,17 +345,17 @@ RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female ro
                               "left or right.", 'FOOD', None, None, None, 'MEN', 'WOMEN', None, None, None)
 WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading south.", None, None, None, 'PARKING',
              None, None, 'RESTROOMS', None, None)
-MEN = Room("Men Restroom", "\n You see someone in the corner. \n #1 You could go up to them, \n #2 or go south.", None,
+MEN = Room("Men Restroom", "\n You see someone in the corner. \n#1 You could go up to them, \n#2 or go south.", None,
            None, None, 'PARKING', None, None, 'RESTROOMS', None, boy_men)
-# option = input(">_")
+# command3 = input(">_")
 #
-# if option == "1":
+# if command3 == "1":
 #     print("He is holding an action figure. He says he is lost. Being the person you are, you just stare at him "
 #           "blankly until he walks away.")
 #
-# elif option == "2":
+# elif command3 == "2":
 #     print("You go south.")
-
+#
 
 PARKING = Room('Parking Garage', "You are outside, behind the mall. There is something shiny on the ground. "
                                  "You see a door pretty far from you leading back inside.", 'RESTROOMS', 'GARAGE',
@@ -366,14 +381,14 @@ CLOTHES = Room("Clothing Stores", "The stores are flooded with people, but it is
                                   "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, Clothing, None)
 KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear a huge crash. To the east you see "
                          "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedRabbit, None)
-RACE = Room("Race Track", "A huge track is in front of you.You should take the wrench on the ground", None, 'KIDS',
+RACE = Room("Race Track", "A huge track is in front of you. You should take the wrench on the ground", None, 'KIDS',
             None, None, None, None, None, Wrench, None)
-ARCADE = Room("Arcade", "A room full of retro machines and new gadgets.", None, 'CENTER', None, 'SPORTS', None, None,
-              None, JoyStick, None)
+ARCADE = Room("Arcade", "A room full of retro machines and new gadgets. There is a joystick on the ground.", None,
+              'CENTER', None, 'SPORTS', None, None, None, JoyStick, None)
 
 
-center_node = Room("Center of the Mall", "You are outside a huge shopping center.", 'KIDS', 'FOOD', 'ARCADE', None,
-                   None, None, None, WelcomeLetter, you)
+center_node = Room("Center of the Mall", "You are outside a huge shopping center. There is a letter in your hand.",
+                   'KIDS', 'FOOD', 'ARCADE', None, None, None, None, WelcomeLetter, you)
 
 
 current_node = center_node
@@ -398,5 +413,14 @@ while True:
             print("You Cannot Go This Way.")    
     else:
         print("Command Not Recognized.")
-    if command == "pick up":
-        print("You pick up the %s" % )
+    if command == 'read':
+        test_letter.read_letter()
+    # if command == 'buy':
+    #     def buy(self):
+    #         print("The price is $%s. Do you want to buy it?" % self.price)
+    # command2 = input('>_')
+    # if command2 == 'yes':
+    #         print("It is all yours.")
+    # elif command2 == 'no':
+    #         print("You did not buy it.")
+    # # if command == 'collect':
