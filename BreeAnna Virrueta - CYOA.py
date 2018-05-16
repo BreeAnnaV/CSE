@@ -424,3 +424,5 @@ while True:
     # elif command2 == 'no':
     #         print("You did not buy it.")
     # # if command == 'collect':
+    if command == 'collect':
+        collect = True
