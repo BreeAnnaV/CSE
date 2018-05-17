@@ -17,8 +17,8 @@
       <file leaf-file-name="BreeAnna Virrueta - CYOA.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - CYOA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="404" column="10" lean-forward="true" selection-start-line="404" selection-start-column="10" selection-end-line="404" selection-end-column="10" />
+            <state relative-caret-position="306">
+              <caret line="383" column="80" lean-forward="false" selection-start-line="383" selection-start-column="80" selection-end-line="383" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -97,7 +97,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="41" />
     <option name="y" value="13" />
     <option name="width" value="1307" />
@@ -119,8 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,6 +130,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,7 +318,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="13" width="1307" height="693" extended-state="0" />
+    <frame x="41" y="13" width="1307" height="693" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23780015" sideWeight="0.4897436" order="0" side_tool="false" content_ui="combo" />
@@ -532,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BreeAnna Virrueta - CYOA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="404" column="10" lean-forward="true" selection-start-line="404" selection-start-column="10" selection-end-line="404" selection-end-column="10" />
+        <state relative-caret-position="306">
+          <caret line="383" column="80" lean-forward="false" selection-start-line="383" selection-start-column="80" selection-end-line="383" selection-end-column="80" />
           <folding />
         </state>
       </provider>

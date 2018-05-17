@@ -339,8 +339,9 @@ class Room(object):
 
 CENTER = Room("Center of the Mall", "You are outside a huge shopping center. There is a letter in your hand.", 'KIDS',
               'FOOD', 'ARCADE', None, None, None, None, WelcomeLetter, None)
-FOOD = Room("Food Court", "You are inside. You see many different restaurants. Order a corn dog, soda, salad, or "
-                          "candy.", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, Consumable, None)
+FOOD = Room("Food Court", "You are inside. You see many different restaurants. Order a corn dog, soda, salad, or candy."
+                          "", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, (CornDog, Salad, Soda,
+                                                                                           Candy), None)
 RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female room, the other to the male room. Go "
                               "left or right.", 'FOOD', None, None, None, 'MEN', 'WOMEN', None, None, None)
 WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading south.", None, None, None, 'PARKING',
@@ -378,7 +379,8 @@ BAT = Room('Batting Cage', "You have been looking for a new bat. There is one in
            None, None, None, None, Bat, None)
 SWIM = Room("Swimming Pools", "The room is full of pools.", None, 'ICE', None, None, None, None, None, None, None)
 CLOTHES = Room("Clothing Stores", "The stores are flooded with people, but it is your lucky day, you are already "
-                                  "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, Clothing, None)
+                                  "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, (Shirt, Pants,
+                                                                                                     Shoes, Hat), None)
 KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear a huge crash. To the east you see "
                          "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedRabbit, None)
 RACE = Room("Race Track", "A huge track is in front of you. You should take the wrench on the ground", None, 'KIDS',
@@ -425,4 +427,4 @@ while True:
     #         print("You did not buy it.")
     # # if command == 'collect':
     if command == 'collect':
-        collect = True
+        collect_Item = True
