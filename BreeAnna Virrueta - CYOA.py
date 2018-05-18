@@ -10,9 +10,6 @@ class Item(object):
         print("You drop %s" % self.name)
 
 
-test_item = Item
-
-
 class Toy(Item):
     def __init__(self, name):
         super(Toy, self).__init__(name)
@@ -51,64 +48,63 @@ class JoyStick(Toy):
         print("You pick up the joystick. This may come in handy later.")
 
 
-test_joystick = JoyStick
+test_joystick = JoyStick()
 
 
 class Clothing(Item):
-    def __init__(self, name, brand):
+    def __init__(self, name):
         super(Clothing, self).__init__(name)
-        self.brand = brand
 
     def wear(self):
         print("You wear the %s." % self.name)
 
 
 class Shirt(Clothing):
-    def __init__(self, name, brand):
-        super(Shirt, self).__init__(name, brand)
+    def __init__(self):
+        super(Shirt, self).__init__(name="shirt")
 
     def collect_shirt(self):
-        print("You take the %s shirt." % self.brand)
+        print("You take the %s." % self.name)
 
 
-test_shirt = Shirt
+test_shirt = Shirt()
 
 
 class Pants(Clothing):
-    def __init__(self, name, brand):
-        super(Pants, self).__init__(name, brand)
+    def __init__(self):
+        super(Pants, self).__init__(name="pants")
 
     def collect_pants(self):
-        print("You take the %s pants." % self.brand)
+        print("You take the %s." % self.name)
 
 
-test_pants = Pants
+test_pants = Pants()
 # test_pants.wear()
 # test_pants.collect_pants()
 
 
 class Shoes(Clothing):
-    def __init__(self, name, brand):
-        super(Shoes, self).__init__(name, brand)
+    def __init__(self):
+        super(Shoes, self).__init__(name="shoes")
 
     def collect_shoes(self):
-        print("You take the %s %s." % (self.brand, self.name))
+        print("You take the %s." % self.name)
 
 
-test_shoes = Shoes
+test_shoes = Shoes()
 # test_shoes.collect_shoes()
 # test_shoes.wear()
 
 
 class Hat(Clothing):
-    def __init__(self, name, brand):
-        super(Hat, self).__init__(name, brand)
+    def __init__(self):
+        super(Hat, self).__init__(name="hat")
 
     def collect_hat(self):
-        print("You take the %s %s." % (self.brand, self.name))
+        print("You take the %s." % self.name)
 
 
-test_hat = Hat
+test_hat = Hat()
 # test_hat.collect_hat()
 # test_hat.wear()
 
@@ -121,7 +117,7 @@ class HockeyPuck(Item):
         print("You pick up the hockey puck. This may come in handy later.")
 
 
-test_puck = HockeyPuck
+test_puck = HockeyPuck()
 
 
 class MiniGolfBall(Item):
@@ -132,7 +128,7 @@ class MiniGolfBall(Item):
         print("You pick up the mini golf ball. This may come in handy later.")
 
 
-test_golf = MiniGolfBall
+test_golf = MiniGolfBall()
 
 
 class CarKey(Item):
@@ -143,7 +139,7 @@ class CarKey(Item):
         print("You pick up the car key. This may come in handy later.")
 
 
-test_key = CarKey
+test_key = CarKey()
 
 
 class SteeringWheel(Item):
@@ -154,7 +150,7 @@ class SteeringWheel(Item):
         print("You pick up the steering wheel. This may come in handy later.")
 
 
-test_wheel = SteeringWheel
+test_wheel = SteeringWheel()
 
 
 class WelcomeLetter(Item):
@@ -181,7 +177,7 @@ class Basketball(Item):
         print("You hit someone. Run!")
 
 
-test_ball = Basketball
+test_ball = Basketball()
 
 
 class Weapon(Item):
@@ -206,7 +202,7 @@ class Bat(Weapon):
         print("You take the bat with %s durability." % self.durability)
 
 
-test_bat = Bat
+test_bat = Bat()
 # test_bat.collect_bat()
 # test_bat.attack()
 
@@ -338,10 +334,10 @@ class Room(object):
 
 
 CENTER = Room("Center of the Mall", "You are outside a huge shopping center. There is a letter in your hand.", 'KIDS',
-              'FOOD', 'ARCADE', None, None, None, None, WelcomeLetter, None)
+              'FOOD', 'ARCADE', None, None, None, None, [WelcomeLetter()], None)
 FOOD = Room("Food Court", "You are inside. You see many different restaurants. Order a corn dog, soda, salad, or candy."
-                          "", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, (CornDog, Salad, Soda,
-                                                                                           Candy), None)
+                          "", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, [CornDog, Salad, Soda,
+                                                                                           Candy], None)
 RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female room, the other to the male room. Go "
                               "left or right.", 'FOOD', None, None, None, 'MEN', 'WOMEN', None, None, None)
 WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading south.", None, None, None, 'PARKING',
@@ -360,9 +356,9 @@ MEN = Room("Men Restroom", "\n You see someone in the corner. \n#1 You could go 
 
 PARKING = Room('Parking Garage', "You are outside, behind the mall. There is something shiny on the ground. "
                                  "You see a door pretty far from you leading back inside.", 'RESTROOMS', 'GARAGE',
-               'BASKETBALL', None, None, None, None, CarKey, None)
+               'BASKETBALL', None, None, None, None, [CarKey()], None)
 GOLF = Room("Mini Golf Course", "You are in a slightly lit room with many people waiting in a line. You see golf "
-                                "balls.", None, None, 'FOOD', 'GARBAGE', None, None, None, MiniGolfBall, None)
+                                "balls.", None, None, 'FOOD', 'GARBAGE', None, None, None, [MiniGolfBall], None)
 GARBAGE = Room("Dumpsters", "There is a terrible smell coming from the dumpsters. You see something that catches your "
                             "attention.", 'GOLF', None, 'PARKING', None, None, None, None, SteeringWheel, None)
 BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and you are trying your best not to get hit."
@@ -379,8 +375,8 @@ BAT = Room('Batting Cage', "You have been looking for a new bat. There is one in
            None, None, None, None, Bat, None)
 SWIM = Room("Swimming Pools", "The room is full of pools.", None, 'ICE', None, None, None, None, None, None, None)
 CLOTHES = Room("Clothing Stores", "The stores are flooded with people, but it is your lucky day, you are already "
-                                  "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, (Shirt, Pants,
-                                                                                                     Shoes, Hat), None)
+                                  "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, [Shirt, Pants,
+                                                                                                     Shoes, Hat], None)
 KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear a huge crash. To the east you see "
                          "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedRabbit, None)
 RACE = Room("Race Track", "A huge track is in front of you. You should take the wrench on the ground", None, 'KIDS',
@@ -396,6 +392,7 @@ center_node = Room("Center of the Mall", "You are outside a huge shopping center
 current_node = center_node
 directions = ['north', 'west', 'east', 'south', 'left', 'right', 'leave', 'order']
 short_directions = ['n', 'w', 'e', 's']
+inventory = []
 
 while True:
     print(current_node.name)
@@ -427,4 +424,13 @@ while True:
     #         print("You did not buy it.")
     # # if command == 'collect':
     if command == 'collect':
-        collect_Item = True
+        item_name = input("What item? ")
+        found = False
+        for item in current_node.item:
+            if item.name.lower() == item_name.lower():
+                inventory.append(item)
+                print("Taken.")
+                found = True
+
+        if not found:
+            print("I don't see it here.")
