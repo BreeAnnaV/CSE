@@ -20,7 +20,7 @@ class Toy(Item):
 
 class StuffedRabbit(Toy):
     def __init__(self):
-        super(StuffedRabbit, self).__init__(name="Stuffed Rabbit")
+        super(StuffedRabbit, self).__init__(name="stuffed rabbit")
 
     def collect_animal(self):
         print("You take the %s." % self.name)
@@ -31,7 +31,7 @@ test_stuffed = StuffedRabbit()
 
 class ActionFigure(Toy):
     def __init__(self):
-        super(ActionFigure, self).__init__(name="Batman")
+        super(ActionFigure, self).__init__(name="action figure")
 
     def collect_figure(self):
         print("You take the %s action figure." % self.name)
@@ -122,7 +122,7 @@ test_puck = HockeyPuck()
 
 class MiniGolfBall(Item):
     def __init__(self):
-        super(MiniGolfBall, self).__init__(name="mini golf ball")
+        super(MiniGolfBall, self).__init__(name="golf balls")
 
     def collect_ball(self):
         print("You pick up the mini golf ball. This may come in handy later.")
@@ -133,7 +133,7 @@ test_golf = MiniGolfBall()
 
 class CarKey(Item):
     def __init__(self):
-        super(CarKey, self).__init__(name="car key")
+        super(CarKey, self).__init__(name="key")
 
     def collect_key(self):
         print("You pick up the car key. This may come in handy later.")
@@ -216,7 +216,7 @@ class HockeyStick(Weapon):
         print("You take the hockey stick with %s durability." % self.durability)
 
 
-test_stick = HockeyStick
+test_stick = HockeyStick()
 
 
 class Wrench(Weapon):
@@ -228,7 +228,7 @@ class Wrench(Weapon):
         print("You take the wrench with %s durability" % self.durability)
 
 
-test_wrench = Wrench
+test_wrench = Wrench()
 
 
 class Consumable(Item):
@@ -246,7 +246,7 @@ class CornDog(Consumable):
         print("You eat the %s." % self.name)
 
 
-test_dog = CornDog
+test_dog = CornDog()
 # test_dog.buy()
 
 
@@ -259,7 +259,7 @@ class Soda(Consumable):
         print("You take a sip of the %s." % self.name)
 
 
-test_soda = Soda
+test_soda = Soda()
 
 
 class Salad(Consumable):
@@ -271,7 +271,7 @@ class Salad(Consumable):
         print("You eat the %s." % self.name)
 
 
-test_salad = Salad
+test_salad = Salad()
 
 
 class Candy(Consumable):
@@ -283,7 +283,7 @@ class Candy(Consumable):
         print("You eat the %s." % self.name)
 
 
-test_candy = Candy
+test_candy = Candy()
 # test_candy.buy()
 
 
@@ -310,8 +310,8 @@ class Characters(object):
         print("%s spawn in the world." % self.name)
 
 
-boy_men = Characters("The little boy", "He is holding something.", ActionFigure, False)
-you = Characters("You", None, 'Nothing', True)
+boy = Characters("The little boy", "He is holding something.", ActionFigure, False)
+you = Characters("You", None, True, True)
 
 
 class Room(object):
@@ -334,55 +334,48 @@ class Room(object):
 
 
 CENTER = Room("Center of the Mall", "You are outside a huge shopping center. There is a letter in your hand.", 'KIDS',
-              'FOOD', 'ARCADE', None, None, None, None, [WelcomeLetter()], None)
+              'FOOD', 'ARCADE', None, None, None, None, [WelcomeLetter], None)
 FOOD = Room("Food Court", "You are inside. You see many different restaurants. Order a corn dog, soda, salad, or candy."
-                          "", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, [CornDog, Salad, Soda,
-                                                                                           Candy], None)
+                          "", 'CLOTHES', 'GOLF', 'CENTER', 'RESTROOMS', None, None, None, [CornDog(), Salad(), Soda(),
+                                                                                           Candy()], None)
 RESTROOMS = Room("Restrooms", "There are two doors. One leading to the female room, the other to the male room. Go "
                               "left or right.", 'FOOD', None, None, None, 'MEN', 'WOMEN', None, None, None)
 WOMEN = Room("Women Restroom", "There is nobody in here. There is a door leading south.", None, None, None, 'PARKING',
              None, None, 'RESTROOMS', None, None)
-MEN = Room("Men Restroom", "\n You see someone in the corner. \n#1 You could go up to them, \n#2 or go south.", None,
-           None, None, 'PARKING', None, None, 'RESTROOMS', None, boy_men)
-# command3 = input(">_")
-#
-# if command3 == "1":
-#     print("He is holding an action figure. He says he is lost. Being the person you are, you just stare at him "
-#           "blankly until he walks away.")
-#
-# elif command3 == "2":
-#     print("You go south.")
-#
-
-PARKING = Room('Parking Garage', "You are outside, behind the mall. There is something shiny on the ground. "
+MEN = Room("Men Restroom", "You see someone in the corner. You could go up to them, or go south.", None,
+           None, None, 'PARKING', None, None, 'RESTROOMS', [ActionFigure()], boy)
+PARKING = Room('Parking Garage', "You are outside, behind the mall. There is a shiny key on the ground. "
                                  "You see a door pretty far from you leading back inside.", 'RESTROOMS', 'GARAGE',
                'BASKETBALL', None, None, None, None, [CarKey()], None)
 GOLF = Room("Mini Golf Course", "You are in a slightly lit room with many people waiting in a line. You see golf "
-                                "balls.", None, None, 'FOOD', 'GARBAGE', None, None, None, [MiniGolfBall], None)
+                                "balls.", None, None, 'FOOD', 'GARBAGE', None, None, None, [MiniGolfBall()], None)
 GARBAGE = Room("Dumpsters", "There is a terrible smell coming from the dumpsters. You see something that catches your "
-                            "attention.", 'GOLF', None, 'PARKING', None, None, None, None, SteeringWheel, None)
+                            "attention. It's a sterring wheel...", 'GOLF', None, 'PARKING', None, None, None, None,
+               [SteeringWheel()], None)
 BASKETBALL = Room("Basketball Courts", "Basketballs are flying everywhere and you are trying your best not to get hit."
                                        "If you get one you can throw it at someone, or your only way out is through a "
                                        "door to the north.", 'SPORTS', 'PARKING', None, None, None, None, None,
-                  Basketball, None)
+                  [Basketball()], None)
 SPORTS = Room("Sports Center", "There are multiple hallways in front of you. You also see a hockey puck just sitting "
-                               "on the ground.", 'ARCADE', 'BAT', 'ICE', 'BASKETBALL', None, None, None, HockeyPuck,
+                               "on the ground.", 'ARCADE', 'BAT', 'ICE', 'BASKETBALL', None, None, None, [HockeyPuck()],
               None)
 ICE = Room("Ice Rink", "All of a sudden it gets extremely cold. People are playing hockey on the ice. You see a "
-                       "hockey stick next to you, along with a stick", None, 'SPORTS', 'SWIM', None, None, None, None,
-           HockeyStick, None)
+                       "hockey stick next to you.", None, 'SPORTS', 'SWIM', None, None, None, None, [HockeyStick()],
+           None)
 BAT = Room('Batting Cage', "You have been looking for a new bat. There is one in front of you.", None, None, 'SPORTS',
-           None, None, None, None, Bat, None)
+           None, None, None, None, [Bat()], None)
 SWIM = Room("Swimming Pools", "The room is full of pools.", None, 'ICE', None, None, None, None, None, None, None)
 CLOTHES = Room("Clothing Stores", "The stores are flooded with people, but it is your lucky day, you are already "
-                                  "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, [Shirt, Pants,
-                                                                                                     Shoes, Hat], None)
-KIDS = Room("Kids Area", "You are outside. Kids are running around and you hear a huge crash. To the east you see "
-                         "cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None, None, StuffedRabbit, None)
+                                  "wearing clothes!", None, None, 'KIDS', 'FOOD', None, None, None, [Shirt(), Pants(),
+                                                                                                     Shoes(), Hat()],
+               None)
+KIDS = Room("Kids Area", "You are outside and you see a stuffed rabbit on the ground. Kids are running around and you "
+                         "hear a huge crash. To the east you see cars.", None, 'CLOTHES', 'RACE', 'CENTER', None, None,
+            None, [StuffedRabbit()], None)
 RACE = Room("Race Track", "A huge track is in front of you. You should take the wrench on the ground", None, 'KIDS',
-            None, None, None, None, None, Wrench, None)
+            None, None, None, None, None, [Wrench()], None)
 ARCADE = Room("Arcade", "A room full of retro machines and new gadgets. There is a joystick on the ground.", None,
-              'CENTER', None, 'SPORTS', None, None, None, JoyStick, None)
+              'CENTER', None, 'SPORTS', None, None, None, [JoyStick()], None)
 
 
 center_node = Room("Center of the Mall", "You are outside a huge shopping center. There is a letter in your hand.",
@@ -411,18 +404,10 @@ while True:
         except KeyError:
             print("You Cannot Go This Way.")    
     else:
-        print("Command Not Recognized.")
+        print()
     if command == 'read':
         test_letter.read_letter()
-    # if command == 'buy':
-    #     def buy(self):
-    #         print("The price is $%s. Do you want to buy it?" % self.price)
-    # command2 = input('>_')
-    # if command2 == 'yes':
-    #         print("It is all yours.")
-    # elif command2 == 'no':
-    #         print("You did not buy it.")
-    # # if command == 'collect':
+
     if command == 'collect':
         item_name = input("What item? ")
         found = False
@@ -434,3 +419,23 @@ while True:
 
         if not found:
             print("I don't see it here.")
+
+    if command == 'buy':
+        food_name = input("What do you want to buy? ")
+        found = False
+        for item in current_node.item:
+            if item.name.lower() == food_name.lower():
+                inventory.append(item)
+                print("You bought it.")
+                found = True
+
+        if not found:
+            print("I don't see that.")
+
+    if command == "inventory":
+        you_inventory = inventory
+
+    if command == 'go to them':
+        print("He is holding an action figure. He says he is lost. Being the person you are, you just stare at him "
+              "blankly until he walks away.")
+        found = False
